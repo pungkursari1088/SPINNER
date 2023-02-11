@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THR RAMADHAN 2023</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="paragraph">
+      <h3>INI ADALAH SPINNER UNTUK ACARA LEBARAN 2023</h3>
+      <span>THR anak ditentukan dari memutar wheel ini</span> 
+    </div>
+    <div class="container">
+        <div class="spinBtn">spin</div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr:rgb(0, 16, 247);"><span>10.000</span></span></div>
+            <div class="number" style="--i:2;--clr:rgb(255, 5, 5);"><span>20.000</span></span></div>
+            <div class="number" style="--i:3;--clr:rgb(46, 255, 4);"><span>50.000</span></span></div>
+            <div class="number" style="--i:4;--clr:rgb(255, 251, 7);"><span>75.000</span></span></div>
+            <div class="number" style="--i:5;--clr:rgb(255, 0, 191);"><span>100.000</span></span></div>
+            <div class="number" style="--i:6;--clr:rgb(0, 238, 255);"><span>zonk</span></span></div>
+        </div>
+    </div>
+    <script>
+      let wheel = document.querySelector('.wheel');
+      let spinBtn = document.querySelector('.spinBtn');
+      let value = Math.ceil(Math.random()*3600);
+
+      spinBtn.onclick = function(){
+        wheel.style.transform = "rotate("+ value+"deg)";
+        value += Math.ceil(Math.random()*3600);
+      }
+    </script>
+  </body>
+</html>
